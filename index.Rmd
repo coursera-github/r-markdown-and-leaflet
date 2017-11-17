@@ -1,0 +1,28 @@
+---
+title: "r-markdown-and-leaflet website"
+---
+
+## Overview
+
+This is a website created in rmarkdown, containing a leaflet map.
+
+## Date Created
+
+```{r}
+Sys.Date()
+```
+
+## The Map
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addProviderTiles(providers$Stamen.Toner) %>%
+  addTiles() %>%
+  setView(lng = -79.3832, lat = 43.6532, zoom = 12) %>%
+  addMarkers(lng=-79.3832, lat=43.6532,
+             popup="You clicked the marker!",
+             label= "Toronto",
+             labelOptions = labelOptions(noHide=TRUE)
+  )
+```

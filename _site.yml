@@ -1,0 +1,6 @@
+name: r-markdown-and-leaflet website
+navbar:
+    title: "Website"
+    left:
+        - text: "Map"
+          href: index.html
